@@ -49,6 +49,7 @@ export default function Contact() {
             <a
               className="text-link"
               target="_blank"
+              rel="noreferrer"
               href="https://maps.google.com/?q=Suite+7+M%26D+Plaza+14+Ola-Ayeni+Street+Computer+Village+Ikeja"
             >
               Open directions <ArrowUpRight size={16} />

@@ -20,9 +20,9 @@ export const products: Product[] = [
     image: '/images/iphone-graphite.webp',
     price: '₦1,850,000',
     description:
-      'A premium, powerful iPhone with a refined titanium design, pro camera system and all-day performance.',
+      'A premium, powerful iPhone with a refined titanium design, pro camera system and all day performance.',
     specs: [
-      '128GB • 6.3-inch display',
+      '128GB • 6.3 inch display',
       'A18 Pro chip',
       'Advanced triple camera',
       'Battery health checked',
@@ -44,7 +44,7 @@ export const products: Product[] = [
     price: '₦1,350,000',
     description:
       'A bright, capable everyday iPhone with a beautiful display and an advanced dual-camera system.',
-    specs: ['128GB • 6.1-inch display', 'A18 chip', '48MP Fusion camera', 'Battery health checked'],
+    specs: ['128GB • 6.1 inch display', 'A18 chip', '48MP Fusion camera', 'Battery health checked'],
     colors: ['Ultramarine', 'Black', 'White'],
     variants: [
       { label: '128GB', delta: 0 },
@@ -61,7 +61,7 @@ export const products: Product[] = [
     price: '₦1,500,000',
     description: 'A sleek pro iPhone with a durable titanium frame and flexible camera system.',
     specs: [
-      '128GB • 6.1-inch display',
+      '128GB • 6.1 inch display',
       'A17 Pro chip',
       'Pro camera system',
       'Battery health checked',
@@ -82,7 +82,7 @@ export const products: Product[] = [
     price: '₦1,080,000',
     description: 'A capable everyday iPhone with a vivid display and an easy-to-use camera system.',
     specs: [
-      '128GB • 6.1-inch display',
+      '128GB • 6.1 inch display',
       'A16 Bionic chip',
       '48MP main camera',
       'Battery health checked',
@@ -136,8 +136,8 @@ export const products: Product[] = [
     image: '/images/dell-xps.webp',
     price: '₦2,400,000',
     description:
-      'A premium Windows laptop with a crisp display and compact, travel-friendly design.',
-    specs: ['Intel Core Ultra 7', '16GB RAM', '512GB SSD', '13.4-inch display'],
+      'A premium Windows laptop with a crisp display and compact, travel friendly design.',
+    specs: ['Intel Core Ultra 7', '16GB RAM', '512GB SSD', '13.4 inch display'],
     colors: ['Platinum', 'Graphite'],
     variants: [
       { label: '16GB / 512GB', delta: 0 },
@@ -153,7 +153,7 @@ export const products: Product[] = [
     image: '/images/dell-latitude.webp',
     price: '₦1,950,000',
     description: 'A dependable business laptop built for productive work on the move.',
-    specs: ['Intel Core i7', '16GB RAM', '512GB SSD', '14-inch display'],
+    specs: ['Intel Core i7', '16GB RAM', '512GB SSD', '14 inch display'],
     colors: ['Silver', 'Dark Grey'],
     variants: [
       { label: '16GB / 512GB', delta: 0 },
@@ -167,8 +167,8 @@ export const products: Product[] = [
     category: 'Laptops',
     image: '/images/hp-laptop.webp',
     price: '₦1,650,000',
-    description: 'A polished business-ready laptop for meetings, study and everyday productivity.',
-    specs: ['Intel Core i7', '16GB RAM', '512GB SSD', '14-inch display'],
+    description: 'A polished laptop for business for meetings, study and everyday productivity.',
+    specs: ['Intel Core i7', '16GB RAM', '512GB SSD', '14 inch display'],
     colors: ['Silver'],
     variants: [
       { label: '16GB / 512GB', delta: 0 },
@@ -204,7 +204,7 @@ export const products: Product[] = [
     image: '/images/tablet.webp',
     price: '₦1,150,000',
     description: 'A versatile tablet for notes, creative work, streaming and getting things done.',
-    specs: ['11-inch display', 'Wi-Fi', 'USB-C', 'Apple Pencil compatible'],
+    specs: ['11 inch display', 'Wi-Fi', 'USB-C', 'Apple Pencil compatible'],
     colors: ['Blue', 'Starlight', 'Space Grey'],
     variants: [
       { label: '128GB', delta: 0 },

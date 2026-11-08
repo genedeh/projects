@@ -31,7 +31,7 @@ export default function MacPage() {
           <ul>
             <li>
               <CheckCircle2 />
-              New and pre-owned options
+              New and previously owned options
             </li>
             <li>
               <CheckCircle2 />
