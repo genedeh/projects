@@ -1,5 +1,77 @@
 'use client';
-import {useMemo,useState} from 'react';
-import {ArrowUpRight,Check,MessageCircle,ShieldCheck} from 'lucide-react';
-import {Product} from './data';
-export function Configurator({product}:{product:Product}){const [variant,setVariant]=useState(product.variants[0].label);const [color,setColor]=useState(product.colors[0]);const variantData=product.variants.find(v=>v.label===variant)??product.variants[0];const numeric=Number(product.price.replace(/[^0-9]/g,''))+variantData.delta;const formatted='₦'+numeric.toLocaleString('en-NG');const href=useMemo(()=>`https://wa.me/?text=${encodeURIComponent(`Hello MAC 360, I’m interested in the ${product.name}.\nConfiguration: ${variant}\nColour: ${color}\nIndicative price: ${formatted}\nPlease confirm availability, exact specs and current price.`)}`,[product.name,variant,color,formatted]);return <><div className="detail-price">{formatted}<span>indicative price · confirm in chat</span></div><div className="detail-select"><label htmlFor="variant">Configuration <span>Choose one to estimate</span></label><select id="variant" value={variant} onChange={e=>setVariant(e.target.value)}>{product.variants.map(v=><option key={v.label} value={v.label}>{v.label}{v.delta>0?` (+₦${v.delta.toLocaleString('en-NG')})`:v.delta<0?` (−₦${Math.abs(v.delta).toLocaleString('en-NG')})`:''}</option>)}</select></div><div className="detail-select"><label htmlFor="color">Colour <span>Subject to stock</span></label><select id="color" value={color} onChange={e=>setColor(e.target.value)}>{product.colors.map(c=><option key={c}>{c}</option>)}</select></div><div className="detail-quick-specs">{product.specs.map(s=><span key={s}><Check size={15}/>{s}</span>)}</div><div className="detail-order"><a className="button button-blue" href={href} target="_blank" rel="noreferrer"><MessageCircle size={17}/>Ask about this device<ArrowUpRight size={16}/></a><p>Your chosen configuration is included in the enquiry. We’ll confirm current stock and pricing.</p></div><div className="detail-assurance"><ShieldCheck size={19}/><span><b>Real help, before you decide.</b><small>We’ll confirm exact specs, condition, price and availability in chat.</small></span></div></>}
+import { useMemo, useState } from 'react';
+import { ArrowUpRight, Check, MessageCircle, ShieldCheck } from 'lucide-react';
+import { Product } from './data';
+export function Configurator({ product }: { product: Product }) {
+  const [variant, setVariant] = useState(product.variants[0].label);
+  const [color, setColor] = useState(product.colors[0]);
+  const variantData = product.variants.find((v) => v.label === variant) ?? product.variants[0];
+  const numeric = Number(product.price.replace(/[^0-9]/g, '')) + variantData.delta;
+  const formatted = '₦' + numeric.toLocaleString('en-NG');
+  const href = useMemo(
+    () =>
+      `https://wa.me/?text=${encodeURIComponent(`Hello MAC 360, I’m interested in the ${product.name}.\nConfiguration: ${variant}\nColour: ${color}\nIndicative price: ${formatted}\nPlease confirm availability, exact specs and current price.`)}`,
+    [product.name, variant, color, formatted],
+  );
+  return (
+    <>
+      <div className="detail-price">
+        {formatted}
+        <span>indicative price · confirm in chat</span>
+      </div>
+      <div className="detail-select">
+        <label htmlFor="variant">
+          Configuration <span>Choose one to estimate</span>
+        </label>
+        <select id="variant" value={variant} onChange={(e) => setVariant(e.target.value)}>
+          {product.variants.map((v) => (
+            <option key={v.label} value={v.label}>
+              {v.label}
+              {v.delta > 0
+                ? ` (+₦${v.delta.toLocaleString('en-NG')})`
+                : v.delta < 0
+                  ? ` (−₦${Math.abs(v.delta).toLocaleString('en-NG')})`
+                  : ''}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="detail-select">
+        <label htmlFor="color">
+          Colour <span>Subject to stock</span>
+        </label>
+        <select id="color" value={color} onChange={(e) => setColor(e.target.value)}>
+          {product.colors.map((c) => (
+            <option key={c}>{c}</option>
+          ))}
+        </select>
+      </div>
+      <div className="detail-quick-specs">
+        {product.specs.map((s) => (
+          <span key={s}>
+            <Check size={15} />
+            {s}
+          </span>
+        ))}
+      </div>
+      <div className="detail-order">
+        <a className="button button-blue" href={href} target="_blank" rel="noreferrer">
+          <MessageCircle size={17} />
+          Ask about this device
+          <ArrowUpRight size={16} />
+        </a>
+        <p>
+          Your chosen configuration is included in the enquiry. We’ll confirm current stock and
+          pricing.
+        </p>
+      </div>
+      <div className="detail-assurance">
+        <ShieldCheck size={19} />
+        <span>
+          <b>Real help, before you decide.</b>
+          <small>We’ll confirm exact specs, condition, price and availability in chat.</small>
+        </span>
+      </div>
+    </>
+  );
+}

@@ -1,2 +1,73 @@
-import Link from 'next/link';import {ArrowRight,ArrowUpRight,CheckCircle2} from 'lucide-react';import {Hero,ProductGrid,SectionTitle,Reveal,WhatsappCTA} from '@/components';import {products} from '@/data';
-export default function MacPage(){const list=products.filter(p=>p.maker==='Apple'&&(p.category==='Mac'||p.category==='Accessories'||p.category==='Tablets'));return <main><Hero kind="mac"/><section className="section brand-intro"><Reveal><span className="brand-mark">M</span><div><small>APPLE AT MAC 360</small><h2>Less scrolling.<br/><em>More creating.</em></h2></div></Reveal><Reveal delay={.12}><p>From a featherlight MacBook Air to a MacBook Pro built for demanding work, we’ll help you compare the right configuration and check what’s available today.</p><ul><li><CheckCircle2/>New and pre-owned options</li><li><CheckCircle2/>Configuration advice</li><li><CheckCircle2/>Local support in Ikeja</li></ul><WhatsappCTA text="Ask about Apple stock"/></Reveal></section><section className="section brand-products"><SectionTitle eyebrow="THE MAC COLLECTION" title="A good fit for your day." copy="Explore a few of the Apple devices our customers ask about most." href="/products?brand=Apple"/><ProductGrid items={list}/></section><section className="brand-spotlight mac-spotlight"><div><span>MACBOOK AIR · LIGHT WORK, BIG IDEAS</span><h2>Power to go.<br/><em>Space to think.</em></h2><Link href="/products/macbook-air-m3">Meet MacBook Air <ArrowRight size={16}/></Link></div><img src="/images/macbook-silver.webp" alt="Silver MacBook Air"/></section></main>}
+import Link from 'next/link';
+import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { Hero, ProductGrid, SectionTitle, Reveal, WhatsappCTA } from '@/components';
+import { products } from '@/data';
+export default function MacPage() {
+  const list = products.filter(
+    (p) =>
+      p.maker === 'Apple' &&
+      (p.category === 'Mac' || p.category === 'Accessories' || p.category === 'Tablets'),
+  );
+  return (
+    <main>
+      <Hero kind="mac" />
+      <section className="section brand-intro">
+        <Reveal>
+          <span className="brand-mark">M</span>
+          <div>
+            <small>APPLE AT MAC 360</small>
+            <h2>
+              Less scrolling.
+              <br />
+              <em>More creating.</em>
+            </h2>
+          </div>
+        </Reveal>
+        <Reveal delay={0.12}>
+          <p>
+            From a featherlight MacBook Air to a MacBook Pro built for demanding work, we’ll help
+            you compare the right configuration and check what’s available today.
+          </p>
+          <ul>
+            <li>
+              <CheckCircle2 />
+              New and pre-owned options
+            </li>
+            <li>
+              <CheckCircle2 />
+              Configuration advice
+            </li>
+            <li>
+              <CheckCircle2 />
+              Local support in Ikeja
+            </li>
+          </ul>
+          <WhatsappCTA text="Ask about Apple stock" />
+        </Reveal>
+      </section>
+      <section className="section brand-products">
+        <SectionTitle
+          eyebrow="THE MAC COLLECTION"
+          title="A good fit for your day."
+          copy="Explore a few of the Apple devices our customers ask about most."
+          href="/products?brand=Apple"
+        />
+        <ProductGrid items={list} />
+      </section>
+      <section className="brand-spotlight mac-spotlight">
+        <div>
+          <span>MACBOOK AIR · LIGHT WORK, BIG IDEAS</span>
+          <h2>
+            Power to go.
+            <br />
+            <em>Space to think.</em>
+          </h2>
+          <Link href="/products/macbook-air-m3">
+            Meet MacBook Air <ArrowRight size={16} />
+          </Link>
+        </div>
+        <img src="/images/macbook-silver.webp" alt="Silver MacBook Air" />
+      </section>
+    </main>
+  );
+}

@@ -9,21 +9,28 @@ npm install
 npm run dev
 ```
 
+## Format source files
+
+```bash
+npm run format
+npm run format:check
+```
+
 ## Before launch
 
 - Replace sample products, descriptions, configuration options and indicative prices with verified shop information.
-- Set the business WhatsApp number in `src/components.tsx` and `src/Configurator.tsx` using the international digits-only number. Current links use WhatsApp's share flow because the number was not present in the supplied business profile.
+- Set the business WhatsApp number in `src/components.tsx` and `src/Configurator.tsx` using the international number using digits only. Current links use WhatsApp's share flow because the number was not present in the supplied business profile.
 - Confirm opening hours, address, contact details and image usage with the business.
 
 ## Pages
 
-- `/` — landing page
-- `/products` — filterable sample catalog
-- `/products/[slug]` — product detail with configuration-aware enquiry
-- `/mac`, `/dell` — brand collections
-- `/repairs` — repair services and enquiry path
-- `/about`, `/contact` — business information and shop directions
+- `/`: Landing page
+- `/products`: Filterable sample catalog
+- `/products/[slug]`: Product detail with configuration based enquiries
+- `/mac`, `/dell`: Brand collections
+- `/repairs`: Repair services and enquiries
+- `/about`, `/contact`: Business information and shop directions
 
 ## Deployment
 
-The project is in `mac360-storefront/` within the connected GitHub repository. Configure the Vercel project's Root Directory to `mac360-storefront`; use `main` as its production branch for production deployments from pushes to `main`.
+The project is in `mac360-storefront/` within the connected GitHub repository. Configure the Vercel project's Root Directory to `mac360-storefront`. The production branch is `main`, so its pushes deploy to production.
